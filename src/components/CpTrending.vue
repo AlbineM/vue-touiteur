@@ -3,9 +3,11 @@
     <h2>Termes tendances</h2>
     <div class="trending-container" v-for="word in words" :key="word">
       <span @click="$emit('wordClick', word)">#{{word}}</span>
-      <!--  pour déclencher un évènement dans le composant parent, on utilise la méthode $emit de vue,
-      comme son nom l'indique, CpTrending va alors "émettre" l'évènement "wordClick"
-     !!! L'important est que l'évènement émis par le composant enfant ait le même nom que l'évènement que son parent écoute -->
+<!--
+pour déclencher un évènement dans le composant parent, on utilise la méthode $emit de vue,
+comme son nom l'indique, CpTrending va alors "émettre" l'évènement "wordClick"
+!!! L'important est que l'évènement émis par le composant enfant ait le même nom que l'évènement que son parent écoute
+-->
     </div>
   </section>
 </template>

@@ -1,7 +1,8 @@
 <template>
   <section class="touits-container">
     <h2>Tous les touits</h2>
-    <span>{{test_reactive}} {{test}}</span> <!-- si la propriété test s'incrémente toutes les secondes cela signifie qu'il y a un rechargement
+    <span>{{test_reactive}} {{test}}</span>
+    <!-- si la propriété test s'incrémente toutes les secondes cela signifie qu'il y a un rechargement
     du composant car ce n'est pas une propriété réactive -->
     <p><em>{{test_computed}}</em></p>
     <div v-for="(touit, id) in touits" :key="id">
@@ -50,15 +51,14 @@ export default {
             // mêmes qu'au montage du composant
     test_computed(){
       return this.value_to_be_computed * 256; //(ici value_to_be_computed sera toujours 18 donc 18*256 sera toujours 4608)
-  }
+    }
   },
 
   //LIFECYCLES : beforeCreate / created / beforeMounted / mounted / beforeUpdate / updated / beforeUnmount / unmounted
 
   created() {
     //Toutes les propriétés du composant déclarées ci-dessous sont non réactives elles correspondent aux propriétés classiques
-    // Ce sont des propriétés dont on n'a pas besoin en dehors du composant et qui
-    // ne nécessitent pas de re render le composant
+    // Ce sont des propriétés dont on n'a pas besoin en dehors du composant et qui ne nécessitent pas de re render le composant
     this.isAlive = true;
     this.lastTimestamp = 0;
     this.timeoutID = null;

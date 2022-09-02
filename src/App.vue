@@ -46,9 +46,10 @@ export default {
     // SubviewSendMessageForm,
     // SubviewAuthentication,
   },
-  mounted(){
 
-  },
+
+//  Si jamais on avait besoin d'avoir des variables globales pour une application plus conséquente je vous invite à regarder la documentation de vuex store,
+//  Le store sera composé d'un state, de mutations, d'action, de getters et setters , vraiment pratique et bien présenté !
 
 }
 </script>
