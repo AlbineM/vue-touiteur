@@ -33,3 +33,4 @@ npm install -g @vue/cli
 ```
 npm install vuex@next --save
 ```
+### install vue-router to use routers
